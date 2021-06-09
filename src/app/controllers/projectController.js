@@ -165,14 +165,12 @@ router.get('/movie-list-genre/', async (req, res) => {
 
         return res.send({ movie })
     } catch (err) {
-        console.log(err)
         return res.status(400).send({ error: 'Erro ao procurar genero!' });
     }
 
 });
 
 router.get('/movie-list-title/', async (req, res) => {
-    console.log(req.query.search)
     try {
         const movie = await Movie.find({
             title: req.query.search
@@ -180,14 +178,12 @@ router.get('/movie-list-title/', async (req, res) => {
 
         return res.send({ movie })
     } catch (err) {
-        console.log(err)
         return res.status(400).send({ error: 'Erro ao procurar titulo!' });
     }
 
 });
 
 router.get('/movie-list-director/', async (req, res) => {
-    console.log(req.query.search)
     try {
         const movie = await Movie.find({
             director: req.query.search
@@ -195,7 +191,6 @@ router.get('/movie-list-director/', async (req, res) => {
 
         return res.send({ movie })
     } catch (err) {
-        console.log(err)
         return res.status(400).send({ error: 'Erro ao procurar titulo!' });
     }
 
