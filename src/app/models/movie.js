@@ -14,7 +14,7 @@ const MovieSchema = new mongoose.Schema({
         type: String,
         require: true,
     },
-    genres: {
+    genre: {
         type: String,
         require: true,
     },
